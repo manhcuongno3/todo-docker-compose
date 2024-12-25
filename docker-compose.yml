@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: cpc0816/my-todo-app-fe
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  backend:
+    image: cpc0816/my-node-app
+    container_name: backend
+    ports:
+      - "8000:8000"
